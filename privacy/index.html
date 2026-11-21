@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light dark">
+<title>Privacy Policy · BusinessOS Beta</title>
+<meta name="description" content="What the BusinessOS Beta Android app and its server collect, why, who handles it, how long it is kept and how to delete it.">
+<link rel="canonical" href="https://pulkitsardana.github.io/businessos-policies/privacy/">
+<link rel="alternate" hreflang="en" href="https://pulkitsardana.github.io/businessos-policies/privacy/">
+<link rel="alternate" hreflang="hi" href="https://pulkitsardana.github.io/businessos-policies/hi/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://pulkitsardana.github.io/businessos-policies/privacy/">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap">
+<a class="brand" href="../"><img src="../assets/icon.svg" alt="" width="28" height="28"><span>BusinessOS Beta</span></a>
+<nav class="site-nav" aria-label="Policies"><a href="../privacy/" aria-current="page">Privacy</a><a href="../delete-account/">Delete account</a><a href="../terms/">Terms</a><a href="../beta-testing/">Beta testing</a><a class="lang" href="../hi/privacy/" lang="hi" hreflang="hi">हिंदी</a></nav>
+</div>
+</header>
+<main id="main" class="wrap">
+<h1>BusinessOS Beta Privacy Policy</h1>
+<p class="meta">Last updated: 21 November 2026 · <a href="../hi/privacy/" lang="hi" hreflang="hi">हिंदी में पढ़ें</a></p>
+
+<p class="lede">This policy explains what the <strong>BusinessOS Beta</strong> Android app (<code>app.businessos.android</code>) and its server collect, why, who handles it for us, how long it is kept and how you can delete it. BusinessOS Beta is made by <strong>BusinessOS App Studio</strong> ("we", "us") and is being tested on Google Play by people we invite.</p>
+
+<section class="box summary" aria-labelledby="short">
+<h2 id="short">In short</h2>
+<ul>
+<li>Your business records (customers, invoices, payments, expenses) stay on your phone, in an encrypted database. They are not uploaded, synchronised or backed up.</li>
+<li>Voice is recognised on your phone. No audio leaves your phone, and no recordings are kept.</li>
+<li>Our server holds your account: your email address, a one-way hash of your password, your organisation name and what is needed to keep you signed in.</li>
+<li>Gemini (Google's AI) is not switched on. Nothing is sent to Google for AI.</li>
+<li>No ads, no analytics, no tracking, and we never sell data.</li>
+<li>You can delete your account in the app, or <a href="../delete-account/">by email without the app</a>.</li>
+</ul>
+</section>
+
+<p>Please use made-up (synthetic) data only while testing: no real customers, phone numbers or UPI IDs.</p>
+
+<nav class="toc" aria-labelledby="contents">
+<h2 id="contents">Contents</h2>
+<ol>
+<li><a href="#collect">What we collect and why</a></li>
+<li><a href="#phone">What stays on your phone</a></li>
+<li><a href="#not-collected">What we don't collect</a></li>
+<li><a href="#use">How we use data</a></li>
+<li><a href="#providers">Who handles your data</a></li>
+<li><a href="#security">How we protect it</a></li>
+<li><a href="#retention">How long we keep it</a></li>
+<li><a href="#deletion">Deleting your account</a></li>
+<li><a href="#rights">Your choices and rights</a></li>
+<li><a href="#children">Children</a></li>
+<li><a href="#changes">Changes to this policy</a></li>
+<li><a href="#contact">Contact</a></li>
+</ol>
+</nav>
+
+<h2 id="collect">1. What we collect and why</h2>
+
+<h3 id="account">Your account (sent to our server when you register)</h3>
+<ul>
+<li><strong>Email address:</strong> to create your account, sign you in and recognise your requests, such as a request to delete your account.</li>
+<li><strong>Password:</strong> sent over an encrypted connection. The server never stores the password itself, only a one-way hash made with bcrypt. You enter your password to sign in, and again to confirm signing out your other phones or deleting your account.</li>
+<li><strong>Organisation name:</strong> the business name you type when you register. The server stores it as the name of your organisation and of its default business profile, and links your account to the organisation as its owner.</li>
+<li><strong>No email from the server:</strong> the beta has no email service, so the server never sends you email.</li>
+</ul>
+
+<h3 id="cash">The "Cash" account for your business</h3>
+<p>After you sign in, the app asks the server to create a money account named "Cash" for your organisation, so that you can record cash payments straight away. It contains no customers or payments: those stay on your phone.</p>
+
+<h3 id="sign-in">Signing in and keeping your account safe</h3>
+<ul>
+<li><strong>Sign-in tokens:</strong> when you sign in, the server gives the app an access token that lasts 15 minutes and a refresh token that keeps you signed in for 90 days after the app last renewed it. The server keeps a counter on your account that lets it cancel tokens, for example when you use "Sign out of all other phones" or delete your account.</li>
+<li><strong>IP address and account ID:</strong> to stop password guessing and overuse, the server counts recent requests by your phone's IP address (and by your account ID when you are signed in), and counts sign-in attempts by a one-way hash of the email address. These counters are kept at Upstash and are deleted automatically within one hour. We don't use IP addresses to find out where you are.</li>
+<li><strong>Server logs:</strong> for each request, the server's log records the time, the type of request, which part of the server was used, the result, how long it took, a random request number and network (IP) addresses. The logs don't contain your password, your sign-in tokens or your email address. Render keeps them for 7 days.</li>
+</ul>
+
+<h3 id="gemini">Text you choose to send: Gemini understanding (optional, not switched on)</h3>
+<p>The app understands most typed and spoken commands on your phone, and those are not sent anywhere. When it can't understand some words, it can ask "Use Gemini to understand this?".</p>
+<ul>
+<li>If you choose "Agree and send", the words (as text, never audio), the language the app detected, a random request number and the version of the notice you agreed to are sent to our server, with your sign-in token.</li>
+<li>Gemini understanding is not switched on. While it is off, our server refuses these requests, doesn't store the words and sends nothing to Google.</li>
+<li>Before Gemini is switched on, we will update this policy and the in-app notice, and tell testers.</li>
+<li>You can withdraw your agreement at any time in Settings › Language &amp; voice.</li>
+</ul>
+
+<h3 id="invitation">Your invitation</h3>
+<p>To invite you, we receive two email addresses from you, which are often the same: the address of the Google account you use on Google Play, and the address you will register with. We add the first to the tester list in Google Play Console, so that Google Play lets you install the test version, and the second to the invitation list in our server's settings at Render, so that it can register. Only invited addresses can create an account.</p>
+
+<h3 id="emails">If you email us</h3>
+<p>We receive your email address and what you write. We use them only to reply to you and to handle your request.</p>
+
+<h2 id="phone">2. What stays on your phone</h2>
+<ul>
+<li><strong>Business records:</strong> customers, invoices, payments, expenses and your business details for invoices are kept only on your phone, in a database encrypted with SQLCipher whose key is protected by the Android Keystore. They are not sent to our server, not synchronised and not backed up: Android backup and transfer to a new phone are turned off for this data. They are deleted when you delete your account in the app, clear the app's storage or uninstall the app.</li>
+<li><strong>Invoice PDFs:</strong> when you share an invoice, the app creates a PDF in its private storage and passes it to the app you choose in Android's share menu. What happens next is up to you and that app.</li>
+<li><strong>Voice:</strong> the microphone is used only after you tap it, while the screen shows "Microphone active · tap to finish". BusinessOS uses only Android's on-device speech recognition (Android 13 or later, with the language downloaded), with no online fallback, so the audio doesn't leave your phone, and BusinessOS keeps no recording. The recognised words are used on your phone to prepare a record, which you check and confirm.</li>
+<li><strong>Settings and sign-in:</strong> your app language, your Gemini choice and your sign-in tokens are kept on your phone. The tokens are kept in encrypted storage.</li>
+</ul>
+
+<h2 id="not-collected">3. What we don't collect</h2>
+<p>The only sensitive permission the app asks for is the microphone. The app doesn't read your contacts, location, photos or files, and it doesn't use advertising IDs or other device identifiers. It contains no advertising, analytics or crash-reporting code, and we don't track you across other apps or websites.</p>
+
+<h2 id="use">4. How we use data</h2>
+<p>We use the data described above only to run your account and this test: to register you, sign you in, keep your account secure, keep the server working and answer you. We don't use it for advertising or profiling, we don't sell it, and we don't use it to train AI models.</p>
+
+<h2 id="providers">5. Who handles your data</h2>
+<p>We don't sell your data or give it to anyone for their own purposes. These service providers handle it for us:</p>
+<div class="table-wrap">
+<table class="stack">
+<thead><tr><th scope="col">Provider</th><th scope="col">What it does for us</th><th scope="col">Data it handles</th><th scope="col">Where</th></tr></thead>
+<tbody>
+<tr><td data-label="Provider">Render</td><td data-label="What it does for us">Runs our server and keeps its logs</td><td data-label="Data it handles">Everything the app sends to the server; server logs (7 days); the invitation list</td><td data-label="Where">Singapore</td></tr>
+<tr><td data-label="Provider">Neon</td><td data-label="What it does for us">Our PostgreSQL database</td><td data-label="Data it handles">Your account, organisation, business profile and "Cash" account</td><td data-label="Where">Singapore (AWS)</td></tr>
+<tr><td data-label="Provider">Upstash</td><td data-label="What it does for us">Short-lived counters that limit requests</td><td data-label="Data it handles">IP addresses, account IDs and email hashes, for up to 1 hour</td><td data-label="Where">Singapore (AWS)</td></tr>
+<tr><td data-label="Provider">Google</td><td data-label="What it does for us">Gmail holds our email; Google Play distributes the app and holds the tester list</td><td data-label="Data it handles">Emails you send us; your place on the tester list</td><td data-label="Where">Google's systems</td></tr>
+<tr><td data-label="Provider">GitHub</td><td data-label="What it does for us">Hosts this website</td><td data-label="Data it handles">Visitors' IP addresses, which GitHub logs for security</td><td data-label="Where">GitHub's systems</td></tr>
+</tbody>
+</table>
+</div>
+<p>When you install the app or join the test through Google Play, Google handles that data under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. GitHub handles visits to this website under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>. We may disclose data if the law requires it.</p>
+
+<h2 id="security">6. How we protect it</h2>
+<ul>
+<li>The app talks to our server only over encrypted connections (HTTPS); it refuses unencrypted connections. The server connects to its database and to Upstash over encrypted connections that check the provider's certificate.</li>
+<li>Passwords are stored only as bcrypt hashes.</li>
+<li>Sign-in attempts and other requests are limited, to slow down password guessing.</li>
+<li>On your phone, your records are encrypted, your sign-in tokens are kept in encrypted storage, and nothing is copied to cloud backups.</li>
+<li>You can sign out every other phone at once in Settings › Security &amp; account › "Sign out of all other phones".</li>
+<li>Our server logs leave out passwords, sign-in tokens and email addresses.</li>
+</ul>
+<p>No system is perfectly secure, which is one more reason to use made-up data only during the test.</p>
+
+<h2 id="retention">7. How long we keep it</h2>
+<div class="table-wrap">
+<table class="stack">
+<thead><tr><th scope="col">Data</th><th scope="col">How long it is kept</th></tr></thead>
+<tbody>
+<tr><td data-label="Data">Account data on our server: email address, password hash, organisation, business profile, "Cash" account</td><td data-label="How long it is kept">Until you delete your account, and at most until 30 days after the beta ends. Deleted records can stay in Neon's database recovery history for up to 6 hours; then they are gone.</td></tr>
+<tr><td data-label="Data">Invitation list (your email address)</td><td data-label="How long it is kept">Until you ask us to remove it, and at most until 30 days after the beta ends. Deleting your account in the app doesn't remove it, so that you can register again; email us if you want it removed.</td></tr>
+<tr><td data-label="Data">Your place on the Google Play tester list</td><td data-label="How long it is kept">Until you leave the test, or until we remove you when you ask or when the test ends. Google handles this list.</td></tr>
+<tr><td data-label="Data">Request-limit counters</td><td data-label="How long it is kept">Up to 1 hour</td></tr>
+<tr><td data-label="Data">Server logs</td><td data-label="How long it is kept">7 days</td></tr>
+<tr><td data-label="Data">Words sent for Gemini understanding</td><td data-label="How long it is kept">Not kept: refused while Gemini is off</td></tr>
+<tr><td data-label="Data">Your emails to us and our replies</td><td data-label="How long it is kept">Until 30 days after the beta ends, so that we can show which requests we handled</td></tr>
+<tr><td data-label="Data">Records on your phone</td><td data-label="How long it is kept">Until you delete your account in the app, clear the app's storage or uninstall the app</td></tr>
+</tbody>
+</table>
+</div>
+<p>We make no other backups of server data. Within 30 days after the beta ends, we delete the server, its database and the invitation list.</p>
+
+<h2 id="deletion">8. Deleting your account</h2>
+<ul>
+<li><strong>In the app:</strong> go to Settings › Security &amp; account › Delete account, enter your password, tap "Delete my account" and then "Delete". Our server immediately deletes your account, your organisation, its business profile and "Cash" account, and every business of which you are the only member, with its records. The app also removes from your phone your business records, your Gemini choice, your sign-in and the invoice PDFs it made for sharing. Copies you have already shared or saved elsewhere are not affected, and app settings such as language stay until you uninstall the app.</li>
+<li><strong>Without the app:</strong> email us as described on the <a href="../delete-account/">Delete your account</a> page. We confirm the request with your account's email address and delete the account within 7 days after you confirm. We never ask for your password.</li>
+</ul>
+
+<h2 id="rights">9. Your choices and rights</h2>
+<ul>
+<li>You can ask us to tell you what data we hold about you, to correct it or to delete it. Write to <a class="email" href="mailto:businessos921@gmail.com">businessos921@gmail.com</a> from your account's email address (<a href="mailto:businessos921@gmail.com?subject=BusinessOS%20privacy%20request">start an email</a>). We reply within 30 days. An account deletion is done within 7 days after you confirm it.</li>
+<li>To make sure a request is really yours, we reply to your account's email address. We never ask for your password.</li>
+<li>You can withdraw your agreement to Gemini understanding at any time in Settings › Language &amp; voice.</li>
+<li>You can turn off the microphone permission at any time in Android's settings. You can still type everything.</li>
+<li>You can leave the test at any time: see <a href="../beta-testing/#leave">Leaving the test</a>.</li>
+</ul>
+
+<h2 id="children">10. Children</h2>
+<p>BusinessOS Beta is for adults aged 18 or over who run or work in a business. It is not meant for children. If we learn that a child has registered, we will delete the account.</p>
+
+<h2 id="changes">11. Changes to this policy</h2>
+<p>If we change this policy, we will update this page and the date at the top. Before a significant change takes effect, such as switching on Gemini understanding, we will update the in-app notice and tell testers.</p>
+
+<h2 id="contact">12. Contact</h2>
+<p>BusinessOS App Studio<br>Email: <a class="email" href="mailto:businessos921@gmail.com">businessos921@gmail.com</a></p>
+<p class="small">This policy is also available <a href="../hi/privacy/" lang="hi" hreflang="hi">in Hindi</a>. If the two versions differ, the English version applies.</p>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<p><strong>BusinessOS Beta, an Android app by BusinessOS App Studio</strong></p>
+<nav aria-label="Policy links"><a href="../privacy/" aria-current="page">Privacy Policy</a><a href="../delete-account/">Delete your account</a><a href="../terms/">Terms of Use</a><a href="../beta-testing/">Beta testing</a><a href="../hi/privacy/" lang="hi" hreflang="hi">हिंदी</a></nav>
+<p>Contact: <a class="email" href="mailto:businessos921@gmail.com">businessos921@gmail.com</a></p>
+<p>© 2026 BusinessOS App Studio</p>
+</div>
+</footer>
+</body>
+</html>
